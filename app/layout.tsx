@@ -1,9 +1,10 @@
+import './reset.scss'
+import './globals.scss'
 import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
-import './reset.css'
-import './globals.css'
 
 import ToasterProvider from './Components/ToasterProvider/ToasterProvider'
+import AppContainer from './Components/AppContainer/AppContainer'
 
 const inter = Montserrat({ subsets: ['latin'] })
 
@@ -17,11 +18,14 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
   return (
     <html lang="pl">
-      <body className={inter.className}>
+      <body className={`${inter.className}`}>
         <ToasterProvider />
-        {children}
+        <AppContainer>
+          {children}
+        </AppContainer>
       </body>
     </html>
   )

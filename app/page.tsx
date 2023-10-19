@@ -1,11 +1,10 @@
-
+'use client'
 
 const Home = () => {
+
   return (
     <main className="">
 
-
-      kagsdfkolasdgh lkgsa
     </main>
   )
 }
