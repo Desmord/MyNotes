@@ -5,6 +5,7 @@ import { Montserrat } from 'next/font/google'
 
 import ToasterProvider from './Components/ToasterProvider/ToasterProvider'
 import AppContainer from './Components/AppContainer/AppContainer'
+import MainMenu from './Components/MainMenu/MainMenu'
 
 const inter = Montserrat({ subsets: ['latin'] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${inter.className}`}>
         <ToasterProvider />
         <AppContainer>
+          <MainMenu />
           {children}
         </AppContainer>
       </body>

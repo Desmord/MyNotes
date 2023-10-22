@@ -1,0 +1,77 @@
+@import '../../globals.scss';
+
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.icon {
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-content: center;
+    color: $color-text;
+
+}
+
+.buttons {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+
+    .button {
+        padding: 0px 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.7;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 1;
+            scale: 1.1;
+        }
+
+    }
+
+    .createAccountButton {
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        font-weight: 700;
+        background-color: $color-primary;
+        transition: $transition;
+
+        &:hover {
+            cursor: pointer;
+            scale: 1.1;
+        }
+
+    }
+
+}
+
+@include for-tablet-big{
+    .buttons {
+
+        .createAccountButton {
+            font-size: 14px;
+        }
+    
+    }
+}
+
+@include for-phone{
+    .buttons {
+
+        .createAccountButton {
+            font-size: 12px;
+        }
+    
+    }
+}

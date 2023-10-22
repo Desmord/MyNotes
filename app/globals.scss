@@ -1,6 +1,33 @@
+$color-background: hsl(0, 0%, 96%);
 
-$color-text: hsl(240, 14%, 96%);
-$color-background: hsl(240, 14%, 7%);
-$color-primary: hsl(230, 14%, 52%);
-$color-secondary: hsl(235, 14%, 17%);
-$color-accent: hsl(230, 14%, 57%);
+$color-primary: hsl(240, 6%, 20%);
+$color-secondary: hsl(10, 97%, 59%);
+
+$color-text:hsl(45, 67%, 1%);
+
+$transition: all 0.2s ease;
+
+
+@mixin for-desktop-small {
+    @media (max-width:1280px) {
+        @content;
+    }
+}
+
+@mixin for-tablet-big {
+    @media (max-width:1024px) {
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media (max-width:840px) {
+        @content;
+    }
+}
+
+@mixin for-phone {
+    @media (max-width:640px) {
+        @content;
+    }
+}
